@@ -1,12 +1,17 @@
 abstract class Softdrinks
 {
-	void taste()
+	void Taste()
 	{
-		System.out.println("taste");
+		System.out.println("Coke Taste");
 	}
-	abstract void Amount();
+	abstract void Price();
 	abstract void Sugar();
-	void fat()
+	abstract void Acids();
+	void Flavour()
+	{
+		System.out.println("Flavour");
+	}
+	void Fat()
 	{
 		System.out.println("Fat Contents");
 	}
@@ -15,24 +20,36 @@ abstract class Softdrinks
 class Coke extends Softdrinks
 {
 	@Override
-	void Amount()
+	void Price()
 	{
-		System.out.println("Amount");
+		System.out.println("Coke Price");
 	}
 	@Override
 	void Sugar()
 	{
-		System.out.println("Sugar");
+		System.out.println("Coke Sugar Content");
 	}
+	@Override
+	void Flavour()
+	{
+		System.out.println("Coke Flavour");
+	}
+	@Override
+	void Acids()
+	{
+		System.out.println("Coke Acids");
+		}
 	
 }
 class Mainannomous {
 	public static void main(String[] args) {
 		Coke c =new Coke();
-		c.Amount();
-		c.taste();
+		c.Price();
+		c.Taste();
 		c.Sugar();
-		c.fat();
+		c.Fat();
+		c.Acids();
+		c.Flavour();
 	}
 
 }
